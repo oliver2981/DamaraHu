@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dammy — Interests, life, and our memories.">
+  <title data-i18n="nav.interests">Interests — Dammy</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💕</text></svg>">
+</head>
+<body>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-hero-title" data-i18n="interests.hero.title">兴趣与生活</h1>
+      <p class="page-hero-subtitle" data-i18n="interests.hero.subtitle">课堂之外，生活之中</p>
+    </div>
+  </section>
+
+  <!-- ====== Interest Cards ====== -->
+  <section class="section">
+    <div class="container">
+      <div class="card-grid-2">
+        <div class="card fade-in">
+          <div class="card-icon">📚</div>
+          <h3 class="card-title" data-i18n="interests.item.0.title">阅读</h3>
+          <p class="card-desc" data-i18n="interests.item.0.desc">喜欢读科幻、心理学和传记类书籍，也常翻技术博客。</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🏃</div>
+          <h3 class="card-title" data-i18n="interests.item.1.title">运动</h3>
+          <p class="card-desc" data-i18n="interests.item.1.desc">定期跑步和羽毛球，保持身体与头脑的活力。</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🎸</div>
+          <h3 class="card-title" data-i18n="interests.item.2.title">音乐</h3>
+          <p class="card-desc" data-i18n="interests.item.2.desc">业余时间弹吉他，喜欢独立音乐和古典乐。</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🌍</div>
+          <h3 class="card-title" data-i18n="interests.item.3.title">旅行</h3>
+          <p class="card-desc" data-i18n="interests.item.3.desc">喜欢探索新的城市与文化，用照片记录沿途风景。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Photo Gallery ====== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="memories.photos.title">照片墙</h2>
+      <p class="section-subtitle" data-i18n="memories.photos.desc">用镜头定格我们的故事</p>
+
+      <div class="photo-grid" id="photoGrid">
+        <div class="photo-item fade-in" data-full="assets/images/memories/photo1.jpg">
+          <span class="photo-placeholder">📷</span>
+        </div>
+        <div class="photo-item fade-in" data-full="assets/images/memories/photo2.jpg">
+          <span class="photo-placeholder">📷</span>
+        </div>
+        <div class="photo-item fade-in" data-full="assets/images/memories/photo3.jpg">
+          <span class="photo-placeholder">📷</span>
+        </div>
+        <div class="photo-item fade-in" data-full="assets/images/memories/photo4.jpg">
+          <span class="photo-placeholder">📷</span>
+        </div>
+        <div class="photo-item fade-in" data-full="assets/images/memories/photo5.jpg">
+          <span class="photo-placeholder">📷</span>
+        </div>
+        <div class="photo-item fade-in" data-full="assets/images/memories/photo6.jpg">
+          <span class="photo-placeholder">📷</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Lightbox ====== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&lsaquo;</button>
+    <img src="" alt="" id="lightboxImg">
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">&rsaquo;</button>
+  </div>
+
+  <!-- ====== Video Section ====== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="memories.videos.title">视频集</h2>
+      <p class="section-subtitle" data-i18n="memories.videos.desc">会动的画面，会说话的记忆</p>
+
+      <div class="video-grid">
+        <div class="video-card fade-in">
+          <div class="video-wrapper">
+            <iframe
+              src=""
+              data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="Our Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="video-card-body">
+            <h3>Our First Trip Together</h3>
+            <p>那一天，阳光正好，你也在</p>
+          </div>
+        </div>
+        <div class="video-card fade-in">
+          <div class="video-wrapper">
+            <video controls preload="metadata" poster="">
+              <source src="assets/videos/memory.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <h3>Our Little Moments</h3>
+            <p>平凡日子里的小确幸</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Audio Playlist ====== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="memories.audio.title">为你选的歌</h2>
+      <p class="section-subtitle" data-i18n="memories.audio.desc">每一首都是我想到你时会听的旋律</p>
+
+      <div class="playlist" id="playlist">
+        <div class="playlist-item" data-audio="assets/audio/song1.mp3">
+          <button class="playlist-btn" aria-label="Play">▶</button>
+          <div class="playlist-info">
+            <div class="playlist-title">Song Title 1</div>
+            <div class="playlist-artist">Artist Name</div>
+          </div>
+          <span class="playlist-duration">3:42</span>
+        </div>
+        <div class="playlist-item" data-audio="assets/audio/song2.mp3">
+          <button class="playlist-btn" aria-label="Play">▶</button>
+          <div class="playlist-info">
+            <div class="playlist-title">Song Title 2</div>
+            <div class="playlist-artist">Artist Name</div>
+          </div>
+          <span class="playlist-duration">4:15</span>
+        </div>
+        <div class="playlist-item" data-audio="assets/audio/song3.mp3">
+          <button class="playlist-btn" aria-label="Play">▶</button>
+          <div class="playlist-info">
+            <div class="playlist-title">Song Title 3</div>
+            <div class="playlist-artist">Artist Name</div>
+          </div>
+          <span class="playlist-duration">2:58</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ====== Lightbox + Audio JS ====== -->
+<script>
+(function() {
+  'use strict';
+
+  /* === Photo Lightbox === */
+  var photoItems = document.querySelectorAll('.photo-item');
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var currentIndex = -1;
+  var photoArray = [];
+
+  photoItems.forEach(function(item) {
+    var fullSrc = item.getAttribute('data-full');
+    var img = item.querySelector('img');
+    if (img && img.src) {
+      photoArray.push(img.src);
+      item.setAttribute('data-index', photoArray.length - 1);
+    } else if (fullSrc) {
+      photoArray.push(fullSrc);
+      item.setAttribute('data-index', photoArray.length - 1);
+    }
+  });
+
+  photoItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      var idx = parseInt(item.getAttribute('data-index'));
+      if (idx >= 0 && idx < photoArray.length) {
+        openLightbox(idx);
+      }
+    });
+  });
+
+  function openLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = photoArray[index];
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function nextPhoto() {
+    if (photoArray.length === 0) return;
+    currentIndex = (currentIndex + 1) % photoArray.length;
+    lightboxImg.src = photoArray[currentIndex];
+  }
+
+  function prevPhoto() {
+    if (photoArray.length === 0) return;
+    currentIndex = (currentIndex - 1 + photoArray.length) % photoArray.length;
+    lightboxImg.src = photoArray[currentIndex];
+  }
+
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxNext').addEventListener('click', nextPhoto);
+  document.getElementById('lightboxPrev').addEventListener('click', prevPhoto);
+
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextPhoto();
+    if (e.key === 'ArrowLeft') prevPhoto();
+  });
+
+  /* === Audio Playlist === */
+  var currentAudio = null;
+  var currentItem = null;
+  var playlistItems = document.querySelectorAll('.playlist-item[data-audio]');
+
+  playlistItems.forEach(function(item) {
+    var btn = item.querySelector('.playlist-btn');
+    var src = item.getAttribute('data-audio');
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (currentItem === item && currentAudio) {
+        if (currentAudio.paused) {
+          currentAudio.play();
+          btn.textContent = '⏸';
+        } else {
+          currentAudio.pause();
+          btn.textContent = '▶';
+        }
+        return;
+      }
+      if (currentAudio) {
+        currentAudio.pause();
+        if (currentItem) {
+          currentItem.classList.remove('playing');
+          currentItem.querySelector('.playlist-btn').textContent = '▶';
+        }
+      }
+      currentAudio = new Audio(src);
+      currentItem = item;
+      item.classList.add('playing');
+      btn.textContent = '⏸';
+      currentAudio.play();
+      currentAudio.addEventListener('ended', function() {
+        item.classList.remove('playing');
+        btn.textContent = '▶';
+        currentAudio = null;
+        currentItem = null;
+      });
+      currentAudio.addEventListener('error', function() {
+        item.classList.remove('playing');
+        btn.textContent = '▶';
+        currentAudio = null;
+        currentItem = null;
+      });
+    });
+  });
+})();
+</script>
+
+<script src="js/i18n.js"></script>
+<script src="js/shared.js"></script>
+</body>
+</html>
