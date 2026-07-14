@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Damara Hu — Interests, life, and hobbies.">
+  <title data-i18n="nav.interests">Interests — Damara Hu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-hero-title" data-i18n="interests.hero.title">兴趣与生活</h1>
+      <p class="page-hero-subtitle" data-i18n="interests.hero.subtitle">课堂之外，生活之中</p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="interests.intro.heading">广泛兴趣</h2>
+      <div class="card fade-in" style="max-width:750px;margin:2rem auto;">
+        <p style="font-size:1.05rem;line-height:1.9;" data-i18n="interests.intro.desc">我热爱运动和健身，尤其喜欢游泳、户外远足、爵士舞和剑术，定期进行体育锻炼以保持身心健康。同时对心理学和医学也有浓厚兴趣，喜欢观看与人类行为和医疗保健相关的纪录片和节目。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interest Cards -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="card-grid" style="max-width:900px;margin:0 auto;">
+        <div class="card fade-in">
+          <div class="card-icon">📚</div>
+          <h3 class="card-title" data-i18n="interests.item.0.title">自我觉察</h3>
+          <p class="card-desc" data-i18n="interests.item.0.desc">积极学习演讲技巧，研究有效沟通方法，同时通过冥想练习保持内心平静</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🏃</div>
+          <h3 class="card-title" data-i18n="interests.item.1.title">运动健身</h3>
+          <p class="card-desc" data-i18n="interests.item.1.desc">剑术（武术类）、爵士舞、游泳——用身体表达自我，保持身心活力</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🎸</div>
+          <h3 class="card-title" data-i18n="interests.item.2.title">音乐艺术</h3>
+          <p class="card-desc" data-i18n="interests.item.2.desc">学习钢琴演奏，享受歌唱——音乐是我情感表达的另一种语言</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="interests.gallery.heading">生活瞬间</h2>
+      <p class="section-subtitle" data-i18n="interests.gallery.desc">记录生活的美好时刻</p>
+
+      <div class="photo-grid" id="photoGrid">
+        <div class="photo-item fade-in" data-full="assets/images/avatar.jpg">
+          <img src="assets/images/avatar.jpg" alt="Damara" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="photo-item fade-in">
+          <span class="photo-placeholder">📷</span>
+        </div>
+        <div class="photo-item fade-in">
+          <span class="photo-placeholder">📷</span>
+        </div>
+        <div class="photo-item fade-in">
+          <span class="photo-placeholder">📷</span>
+        </div>
+        <div class="photo-item fade-in">
+          <span class="photo-placeholder">📷</span>
+        </div>
+        <div class="photo-item fade-in">
+          <span class="photo-placeholder">📷</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="memories.videos.heading">视频集</h2>
+      <p class="section-subtitle" data-i18n="memories.videos.desc">会动的画面，会说话的记忆</p>
+
+      <div class="video-grid">
+        <div class="video-card fade-in">
+          <div class="video-wrapper">
+            <video controls preload="metadata" poster="assets/images/avatar.jpg">
+              <source src="assets/videos/memory.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-card-body">
+            <h3>Memory</h3>
+            <p>生活中的点滴时光</p>
+          </div>
+        </div>
+        <div class="video-card fade-in">
+          <div class="video-wrapper">
+            <video controls preload="metadata" poster="assets/images/avatar.jpg">
+              <source src="assets/videos/music.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-card-body">
+            <h3>Music</h3>
+            <p>个人音乐作品</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&lsaquo;</button>
+  <img src="" alt="" id="lightboxImg">
+  <button class="lightbox-next" id="lightboxNext" aria-label="Next">&rsaquo;</button>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  /* === Photo Lightbox === */
+  var photoItems = document.querySelectorAll('.photo-item');
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var currentIndex = -1;
+  var photoArray = [];
+
+  photoItems.forEach(function(item) {
+    var fullSrc = item.getAttribute('data-full');
+    var img = item.querySelector('img');
+    if (img && img.src) {
+      photoArray.push(img.src);
+      item.setAttribute('data-index', photoArray.length - 1);
+    } else if (fullSrc) {
+      photoArray.push(fullSrc);
+      item.setAttribute('data-index', photoArray.length - 1);
+    }
+  });
+
+  photoItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      var idx = parseInt(item.getAttribute('data-index'));
+      if (idx >= 0 && idx < photoArray.length) {
+        openLightbox(idx);
+      }
+    });
+  });
+
+  function openLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = photoArray[index];
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function nextPhoto() {
+    if (photoArray.length === 0) return;
+    currentIndex = (currentIndex + 1) % photoArray.length;
+    lightboxImg.src = photoArray[currentIndex];
+  }
+
+  function prevPhoto() {
+    if (photoArray.length === 0) return;
+    currentIndex = (currentIndex - 1 + photoArray.length) % photoArray.length;
+    lightboxImg.src = photoArray[currentIndex];
+  }
+
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxNext').addEventListener('click', nextPhoto);
+  document.getElementById('lightboxPrev').addEventListener('click', prevPhoto);
+
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextPhoto();
+    if (e.key === 'ArrowLeft') prevPhoto();
+  });
+})();
+</script>
+
+<script src="js/i18n-data.js"></script>
+<script src="js/i18n-engine.js"></script>
+<script src="js/shared.js"></script>
+</body>
+</html>

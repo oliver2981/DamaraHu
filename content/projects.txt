@@ -1,0 +1,84 @@
+# ==========================================
+# PROJECTS PAGE — Work experience & research programs
+# ==========================================
+# How to edit:
+#   key.zh = Chinese text
+#   key.en = English text
+#
+# Lines starting with # are ignored.
+# Keep the key names as-is; only change the values after the = sign.
+# After editing, run: node scripts/build.js
+# ==========================================
+
+projects.hero.subtitle.zh = 工作经历与研究成果
+projects.hero.subtitle.en = Work Experience & Research Outcomes
+
+projects.hero.title.zh = 项目与研究
+projects.hero.title.en = Projects & Research
+
+projects.research.0.desc.zh = <li><strong>研究过程：</strong>对姜黄素与青蒿素进行比较研究，采用系统化工作流程（包括提取、纯化、鉴定，并通过HPLC等色谱技术验证），实现中药材识别、活性物质分离纯化、细胞水平和动物模型建立，以及潜在临床医学应用分析。</li><li><strong>关键成果：</strong>建立了中药活性物质鉴定的标准化方案，为后续药用成分开发提供了技术规范。</li>
+projects.research.0.desc.en = <li><strong>Research Process:</strong> Conducted a comparative study between curcumin and artemisinin, employing a systematic workflow (including extraction, purification, identification, and validation via chromatographic techniques such as HPLC) to achieve traditional Chinese medicine recognition, isolation and purification of active substances, establishment of cellular-level and animal models, as well as analysis of potential clinical medical applications.</li><li><strong>Key Output:</strong> Developed a standardized protocol for the identification of active substances in traditional Chinese medicine, providing technical specifications for subsequent development of medicinal ingredients.</li>
+
+projects.research.0.title.zh = 中草药活性成分鉴定
+projects.research.0.title.en = Identification of Active Compounds of Chinese Herbal Medicine
+
+projects.research.1.desc.zh = <li><strong>研究设计：</strong>依据国际毒性基准，分析甲基汞对孕妇和儿童引起的神经功能障碍。实施跨越体外实验—动物模型—人群研究的研究方法。</li><li><strong>成果与价值：</strong>开发了新型"污染物-疾病影响评估框架"，建立了环境污染物风险评价的标准化方案，为甲基汞暴露防控策略提供了关键理论基础。最终研究成果展示评估排名前30%。</li>
+projects.research.1.desc.en = <li><strong>Research Design:</strong> Analyzed methylmercury-induced neurological disorders in pregnant women and children, adhering to international toxicity benchmarks. Implemented a research methodology spanning in vitro experiments - animal models - human population studies.</li><li><strong>Achievements & Values:</strong> Developed a novel Pollutant-Disease Impact Assessment Framework that established standardized protocols for evaluating environmental contaminant risks, which provided critical theoretical foundations for methylmercury exposure prevention strategies. Achieved top 30% ranking in final research presentation evaluations.</li>
+
+projects.research.1.title.zh = 甲基汞暴露健康影响研究
+projects.research.1.title.en = Research on Health Impacts of Methylmercury Exposure
+
+projects.research.2.desc.zh = <li><strong>技术应用：</strong>利用地理信息系统（GIS）记录废弃物产生点，并整合区块链技术实现废弃物全程可追溯，解决传统追踪方法中数据篡改问题。</li><li><strong>项目成果：</strong>实现40%的废弃物回收率，团队获得"创新废弃物消除"证书。</li>
+projects.research.2.desc.en = <li><strong>Technical Application:</strong> Utilized Geographic Information System (GIS) to record waste generation points and integrated blockchain technology to enable full-process traceability of waste, thereby addressing the issue of data tampering in traditional tracking methods.</li><li><strong>Project Outcomes:</strong> Achieved a 40% waste recycling rate, and the team was awarded the "Innovative Waste Elimination" certificate.</li>
+
+projects.research.2.title.zh = EMAHK废弃物挑战：希慎废弃物追踪计划
+projects.research.2.title.en = EMAHK Waste Challenge: Hysan Waste Tracking Initiative
+
+projects.research.3.desc.zh = <li><strong>风险评估：</strong>全面审视面包制造流程，识别出3类危害因素：物理性（异物污染）、化学性（添加剂过量使用）和生物性（微生物污染），并建立了风险等级评估矩阵。</li><li><strong>方案交付：</strong>提出风险控制措施（包括金属检测、原料采购严格监管、标准化烘焙条件等关键控制点），为企业制定了可操作的HACCP实施指南。相关评估成果在最终展示中获得A级评级。</li>
+projects.research.3.desc.en = <li><strong>Risk Assessment:</strong> Examined the entire bread manufacturing process, identifying 3 categories of hazard factors: physical (foreign object contamination), chemical (additive overuse), and biological (microbial contamination), and established a risk-level evaluation matrix.</li><li><strong>Solution Delivery:</strong> Proposed risk control measures (including critical controls such as metal detection, strict oversight of ingredient sourcing, and standardized baking conditions) and developed an actionable HACCP implementation guide for the enterprise. The related assessment results achieved an A grade in the final presentation.</li>
+
+projects.research.3.title.zh = 面包生产企业HACCP体系研究
+projects.research.3.title.en = HACCP System Research in a Bread Manufacturing Enterprise
+
+projects.research.4.desc.zh = <li><strong>风险分析：</strong>基于ISO职业健康安全管理体系开发了职业风险评估模型，综合考虑食品类货物特性、工人身体状况、运输坡道的倾斜度和粗糙度以及仓储货架高度等因素。</li><li><strong>防护策略：</strong>提出叉车限速、货架防坠落系统和基于PPE的出入控制系统等预防措施，预计将货物搬运相关工伤率降低35%。</li>
+projects.research.4.desc.en = <li><strong>Risk Analysis:</strong> Developed an occupational risk assessment model based on the ISO Occupational Health and Safety Management System, incorporating factors such as the characteristics of food-related goods, workers' physical conditions, the inclination and roughness of transportation slopes, and the height of storage racks.</li><li><strong>Protection Strategies:</strong> Proposed preventive measures including forklift speed restrictions, anti-fall systems for racks, and PPE-based access control systems, projected to reduce work-related injury rates associated with goods handling by 35%.</li>
+
+projects.research.4.title.zh = 高层货架仓库职业安全管理研究
+projects.research.4.title.en = Research on Occupational Safety Management in High-Rise Racking Warehouses
+
+projects.research.5.desc.zh = <li><strong>硬件开发：</strong>以树莓派为主控核心，集成Dynamixel舵机、HC-SR04超声波传感器和Intel RealSense D415深度相机，设计扩展板和散热系统。优化串口通信协议，硬件响应速度提升60%，解决多模块同步延迟问题。</li><li><strong>算法实现：</strong>采用LeNet卷积神经网络进行水果目标识别，开发基于三维重建和路径规划的避障算法。迭代优化PID算法参数，实现定位精度±3mm以内，纠正机械臂定位误差。</li><li><strong>工程验证与优化：</strong>在实验室完成避障和抓取等5项功能测试，验证机器人高识别精度、定位精度和控制稳定性。优化硬件通信效率和算法响应速度，形成可部署的农业采摘技术方案，相关成果发表于国内期刊《现代信息科技》。</li>
+projects.research.5.desc.en = <li><strong>Hardware Development:</strong> Utilized the Raspberry Pi as the main control core, integrating Dynamixel servos, HC-SR04 ultrasonic sensors, and an Intel RealSense D415 depth camera, while designing an expansion board and cooling system. Optimized serial communication protocols, improving hardware response speed by 60%, to address multi-module synchronization delays.</li><li><strong>Algorithm Implementation:</strong> Employed the LeNet convolutional neural network for fruit target recognition and developed an obstacle avoidance algorithm for 3D reconstruction and path planning. Iterated PID algorithm parameters, achieving positioning accuracy within ±3mm, to correct robotic arm positioning errors.</li><li><strong>Engineering Validation and Optimization:</strong> Conducted 5 functional tests, including obstacle avoidance and grasping in the laboratory to verify the robot's high recognition accuracy, positioning precision, and control stability. Optimized hardware communication efficiency and algorithm responsiveness, resulting in a deployable agricultural harvesting technology solution, with related findings being published in the domestic journal Modern Information Technology.</li>
+
+projects.research.5.title.zh = 基于树莓派的深度学习采摘机器人
+projects.research.5.title.en = Raspberry Pi-Based Deep Learning Harvesting Robot
+
+projects.research.6.desc.zh = <li><strong>技术创新：</strong>与团队协作开展土壤重金属、粉煤灰和生物炭研究，参与pH测量和污泥水过滤等实验。创新设计"磁性改性生物炭+球形尼龙网"四级处理装置，实现"吸附-再生-循环利用"的闭环流程。</li><li><strong>研究价值：</strong>该装置可实现废水处理和土壤修复，支持企业绿色转型，带来环境、社会和经济效益。核心技术已发展为专利级解决方案，成功获得"互联网+"大学生创新创业项目立项，进一步支持企业可持续发展。</li>
+projects.research.6.desc.en = <li><strong>Technical Innovation:</strong> Collaborated with the team to conduct studies on soil heavy metals, fly ash, and biochar, participating in experiments such as pH measurement and sludge water filtration. Innovatively designed a four-stage treatment device integrating "magnetic-modified biochar + spherical nylon mesh," achieving a closed-loop process of "adsorption-regeneration-recycling".</li><li><strong>Research Value:</strong> The device enabled wastewater treatment & soil remediation, supporting corporate green transformation & delivering environmental/social/economic benefits. The core technology was developed into a patent-level solution, which successfully secured the Internet Plus College Students Innovation and Entrepreneurship Project, further supporting corporate sustainability.</li>
+
+projects.research.6.title.zh = 磁性改性生物炭土壤重金属修复装置研发
+projects.research.6.title.en = R&D of a Magnetic-Modified Biochar Device for Soil Heavy Metal Remediation
+
+projects.research.heading.zh = 项目与研究
+projects.research.heading.en = Programs & Research
+
+projects.work.0.desc.zh = <li><strong>同声传译：</strong>为制造相关会议和跨职能协作提供中英同声传译，支持物流、质量控制和生产团队，确保部门间高效沟通与协调。通过加强质量部控制组、物理组和分析测试组的操作员资质，有效应对运营挑战。作为公司首次评估计划（含非技术和技术环节），掌握超过15项实验室测试SOP和标准处理方案至关重要。通过团队协作和标准化模拟，团队荣获评估第一名。持续推动TIS（技术信息系统）与LIMS（实验室信息管理系统）的升级与无缝集成，以扩展参数覆盖范围并增强数据连通性。</li><li><strong>部门轮岗：</strong>使用WDS和IVMS系统实时监控货物运输状态和车辆运行，同时应用Trifecta DataPrep进行运营数据的清洗、转换和结构化处理。通过特征工程和工作流优化提升数据质量，实现企业级数据的整合，支持下游分析、决策和机器学习应用。</li>
+projects.work.0.desc.en = <li><strong>Simultaneous interpretation:</strong> Delivered simultaneous interpretation for manufacturing-related meetings and cross-functional engagements, supporting logistics, quality control, and production teams to ensure effective communication and coordination across departments. Addressed operational challenges by strengthening operator qualifications across the Control, Physical, and Analytical Testing groups within the Quality Department. As the company's inaugural assessment initiative — comprising both non-technical and technical sessions — mastery of over 15 laboratory test SOPs and standard treatment protocols was critical. Through collaborative teamwork and standardized simulations, our team secured first place in the assessment. A key ongoing initiative is the upgrade and seamless integration of TIS (Technical Information System) with LIMS (Laboratory Information Management System), designed to enable expanded parameter coverage and enhanced data connectivity.</li><li><strong>Department rotation:</strong> Monitored real-time shipment status and vehicle operations using WDS and IVMS systems, while applying Trifecta DataPrep to clean, transform, and structure operational datasets. Improved data quality through feature engineering and workflow optimization, enabling integration of enterprise-level data and supporting downstream analytics, decision-making, and machine learning applications.</li>
+
+projects.work.0.role.zh = 工业部 管理培训生
+projects.work.0.role.en = Management Trainee, Ministry of Industry
+
+projects.work.0.title.zh = Holcim China
+projects.work.0.title.en = Holcim China
+
+projects.work.1.desc.zh = <li><strong>土壤样本检测：</strong>根据生态研究需求，对1,500份土壤样本进行理化性质分析，涵盖速效钾、有效磷等关键指标，提供高质量基线数据集。</li><li><strong>数据录入与微生物菌株研究：</strong>将2,000–3,000条PCR扩增测序记录上传至BGI智能数据库系统。鉴定优势极端微生物菌株，成功应用于土壤改良产品开发。</li>
+projects.work.1.desc.en = <li><strong>Soil Sample Testing:</strong> Conducted physicochemical property analysis for 1,500 soil samples in alignment with ecological research requirements, covering key indicators including available potassium, available phosphorus, etc. Delivered high-quality baseline datasets.</li><li><strong>Data Entry & Microbial Strain Research:</strong> Uploaded 2,000–3,000 PCR-amplified sequencing records into BGI's intelligent database system. Identified dominant extremophile strains, with successful applications in developing soil amendment products.</li>
+
+projects.work.1.role.zh = 生物信息学分析 实习生
+projects.work.1.role.en = Bioinformatics Analysis Intern
+
+projects.work.1.title.zh = BGI Group（华大基因）
+projects.work.1.title.en = BGI Group
+
+projects.work.heading.zh = 工作经历
+projects.work.heading.en = Work Experience
+

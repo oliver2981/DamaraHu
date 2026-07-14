@@ -1,0 +1,45 @@
+# ==========================================
+# COMMON — Navigation, Footer (shared across all pages)
+# ==========================================
+# How to edit:
+#   key.zh = Chinese text
+#   key.en = English text
+#
+# Lines starting with # are ignored.
+# Keep the key names as-is; only change the values after the = sign.
+# After editing, run: node scripts/build.js
+# ==========================================
+
+footer.connect.zh = 联系方式
+footer.connect.en = Connect
+
+footer.copyright.zh = © 2026 Damara Hu. All rights reserved.
+footer.copyright.en = © 2026 Damara Hu. All rights reserved.
+
+footer.quickLinks.zh = 快速导航
+footer.quickLinks.en = Quick Links
+
+nav.about.zh = 关于我
+nav.about.en = About
+
+nav.contact.zh = 联系方式
+nav.contact.en = Contact
+
+nav.education.zh = 教育成长
+nav.education.en = Education
+
+nav.home.zh = 首页
+nav.home.en = Home
+
+nav.interests.zh = 兴趣与生活
+nav.interests.en = Interests
+
+nav.langToggle.zh = EN
+nav.langToggle.en = 中文
+
+nav.projects.zh = 项目与研究
+nav.projects.en = Projects
+
+nav.themeToggle.zh = 🌙
+nav.themeToggle.en = ☀️
+

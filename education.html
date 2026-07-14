@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Damara Hu — Education and growth timeline.">
+  <title data-i18n="nav.education">Education — Damara Hu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏠</text></svg>">
+</head>
+<body>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-hero-title" data-i18n="education.hero.title">教育成长</h1>
+      <p class="page-hero-subtitle" data-i18n="education.hero.subtitle">每一步都算数</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:900px;">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year" data-i18n="education.timeline.0.year">2024.8 — 2025.11</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 data-i18n="education.timeline.0.title">香港浸会大学</h3>
+            <p data-i18n="education.timeline.0.desc">环境与公共卫生管理 理学硕士</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year" data-i18n="education.timeline.1.year">2020.9 — 2024.6</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 data-i18n="education.timeline.1.title">安徽理工大学</h3>
+            <p data-i18n="education.timeline.1.desc">环境工程 工学学士</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year" data-i18n="education.timeline.2.year">2017.9 — 2020.6</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 data-i18n="education.timeline.2.title">盐道街高级中学</h3>
+            <p data-i18n="education.timeline.2.desc">理科高中生</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="education.skills.heading">核心能力</h2>
+      <div class="tag-cloud fade-in" style="max-width:700px;margin:2rem auto;" data-i18n="education.skills.tags">
+        环境与公共卫生管理, 生物信息学分析, GIS与区块链技术, HACCP体系, 职业安全风险评估, 深度学习与机器视觉, 项目管理, 中英双语
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/i18n-data.js"></script>
+<script src="js/i18n-engine.js"></script>
+<script src="js/shared.js"></script>
+<script>
+// Render tag cloud from i18n comma-separated string (runs after i18n is loaded)
+(function() {
+  function renderTagCloud(el) {
+    var text = el.textContent.trim();
+    var tags = text.split(',').map(function(t) { return t.trim(); }).filter(Boolean);
+    el.innerHTML = '';
+    tags.forEach(function(t) {
+      var span = document.createElement('span');
+      span.className = 'tag';
+      span.textContent = t;
+      el.appendChild(span);
+    });
+    // Store key for language toggle updates
+    el._i18nKey = el.getAttribute('data-i18n');
+  }
+
+  var tagCloud = document.querySelector('[data-i18n="education.skills.tags"]');
+  if (tagCloud) {
+    renderTagCloud(tagCloud);
+    // Hook into language switching: re-render after updatePageText
+    var origUpdate = updatePageText;
+    updatePageText = function() {
+      origUpdate();
+      var el = document.querySelector('[data-i18n="education.skills.tags"]');
+      if (el) renderTagCloud(el);
+    };
+  }
+})();
+</script>
+</body>
+</html>
