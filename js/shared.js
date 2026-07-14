@@ -34,28 +34,17 @@
   /* === Footer HTML template === */
   var footerHTML = '<footer class="site-footer">' +
     '<div class="footer-inner">' +
-      '<div class="footer-col">' +
-        '<h4>Damara Hu</h4>' +
-        '<p data-i18n="home.hero.tagline">Student · Researcher · Creator</p>' +
-      '</div>' +
-      '<div class="footer-col">' +
-        '<h4 data-i18n="footer.quickLinks">Quick Links</h4>' +
-        '<p><a href="/" data-i18n="nav.home">Home</a></p>' +
-        '<p><a href="/about.html" data-i18n="nav.about">About</a></p>' +
-        '<p><a href="/education.html" data-i18n="nav.education">Education</a></p>' +
-        '<p><a href="/projects.html" data-i18n="nav.projects">Projects</a></p>' +
-        '<p><a href="/interests.html" data-i18n="nav.interests">Interests</a></p>' +
-        '<p><a href="/contact.html" data-i18n="nav.contact">Contact</a></p>' +
-      '</div>' +
-      '<div class="footer-col">' +
-        '<h4 data-i18n="footer.connect">Connect</h4>' +
-        '<p><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></p>' +
-        '<p><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></p>' +
-        '<p><a href="mailto:hello@example.com">Email</a></p>' +
-      '</div>' +
-    '</div>' +
-    '<div class="footer-bottom">' +
-      '<p data-i18n="footer.copyright">© 2026 Damara Hu. All rights reserved.</p>' +
+      '<h4 class="footer-brand">Damara Hu</h4>' +
+      '<p class="footer-tagline" data-i18n="home.hero.tagline">Student · Researcher · Creator</p>' +
+      '<nav class="footer-links">' +
+        '<a href="/" data-i18n="nav.home">Home</a>' +
+        '<a href="/about.html" data-i18n="nav.about">About</a>' +
+        '<a href="/education.html" data-i18n="nav.education">Education</a>' +
+        '<a href="/projects.html" data-i18n="nav.projects">Projects</a>' +
+        '<a href="/interests.html" data-i18n="nav.interests">Interests</a>' +
+        '<a href="/contact.html" data-i18n="nav.contact">Contact</a>' +
+      '</nav>' +
+      '<p class="footer-copyright" data-i18n="footer.copyright">© 2026 Damara Hu. All rights reserved.</p>' +
     '</div>' +
   '</footer>';
 

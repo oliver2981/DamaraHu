@@ -518,38 +518,59 @@ img {
 .site-footer {
   background: var(--bg-alt);
   border-top: 1px solid var(--divider);
-  padding: 3rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   margin-top: 4rem;
 }
 
 .footer-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  text-align: center;
 }
 
-.footer-col h4 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+.footer-brand {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
-.footer-col p,
-.footer-col a {
+.footer-tagline {
   font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 2;
+  margin-bottom: 1.5rem;
 }
 
-.footer-bottom {
-  max-width: var(--max-width);
-  margin: 2rem auto 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--divider);
-  text-align: center;
-  font-size: 0.85rem;
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
   color: var(--text-secondary);
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+.footer-links a:not(:last-child)::after {
+  content: '\00B7';
+  margin-left: 0.75rem;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding-top: 1rem;
+  border-top: 1px solid var(--divider);
 }
 
 /* === Animations === */
@@ -580,9 +601,6 @@ img {
 @media (max-width: 1024px) {
   .nav-cards {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .footer-inner {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -646,10 +664,6 @@ img {
   }
   .page-hero-title {
     font-size: 1.8rem;
-  }
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 }
 
