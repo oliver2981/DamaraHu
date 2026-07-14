@@ -19,6 +19,7 @@
         '<li><a href="/education.html" data-i18n="nav.education" data-page="education">Education</a></li>' +
         '<li><a href="/projects.html" data-i18n="nav.projects" data-page="projects">Projects</a></li>' +
         '<li><a href="/interests.html" data-i18n="nav.interests" data-page="interests">Interests</a></li>' +
+        '<li><a href="/contact.html" data-i18n="nav.contact" data-page="contact">Contact</a></li>' +
       '</ul>' +
       '<div class="nav-actions">' +
         '<button class="nav-btn" id="langToggle" data-i18n="nav.langToggle" aria-label="Switch language">EN</button>' +
@@ -44,7 +45,15 @@
         '<p><a href="/education.html" data-i18n="nav.education">Education</a></p>' +
         '<p><a href="/projects.html" data-i18n="nav.projects">Projects</a></p>' +
         '<p><a href="/interests.html" data-i18n="nav.interests">Interests</a></p>' +
+        '<p><a href="/contact.html" data-i18n="nav.contact">Contact</a></p>' +
       '</div>' +
+      '<div class="footer-col">' +
+        '<h4 data-i18n="footer.connect">Connect</h4>' +
+        '<p><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></p>' +
+        '<p><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></p>' +
+        '<p><a href="mailto:hello@example.com">Email</a></p>' +
+      '</div>' +
+    '</div>' +
     '<div class="footer-bottom">' +
       '<p data-i18n="footer.copyright">© 2026 Damara Hu. All rights reserved.</p>' +
     '</div>' +

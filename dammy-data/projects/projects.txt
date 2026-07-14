@@ -1,0 +1,13 @@
+# ==========================================
+# 项目与研究
+# 修改所有【】里的内容
+# ==========================================
+
+SUBTITLE = 【做过的那些事】
+
+RESEARCH_TAGS = 【Human-Computer Interaction】, 【Data Visualization】, 【Web Technologies】, 【Machine Learning】, 【Education Technology】
+
+PROJECT_1 = 【个人网站项目】 | 【从设计到部署，完全自主打造的学术风格个人网站。】 | 【HTML/CSS】, 【JavaScript】, 【Vercel】
+PROJECT_2 = 【数据分析研究】 | 【使用 Python 对大规模数据集进行清洗、分析与可视化。】 | 【Python】, 【Pandas】, 【Matplotlib】
+PROJECT_3 = 【开源贡献】 | 【参与社区开源项目，贡献代码与文档。】 | 【Open Source】, 【GitHub】
+PROJECT_4 = 【课程设计项目】 | 【学术课程中的综合项目实践，涵盖前后端与数据库。】 | 【Full Stack】, 【Database】
