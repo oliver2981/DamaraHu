@@ -1,5 +1,5 @@
-// AUTO-GENERATED from content/*.txt — DO NOT EDIT DIRECTLY
-// To change content, edit the .txt files in content/ then run: node scripts/build.js
+// AUTO-GENERATED from dammy-data/*.txt — DO NOT EDIT DIRECTLY
+// To change content, edit the .txt files in dammy-data/ then run: node scripts/build.js
 const I18N = {
   zh: {
     'about.hero.subtitle': '你好，我是胡美婧（Damara），一个内在真正有趣的灵魂',
@@ -31,9 +31,11 @@ const I18N = {
     'education.timeline.2.desc': '理科高中生',
     'education.timeline.2.title': '盐道街高级中学',
     'education.timeline.2.year': '2017.9 — 2020.6',
+    'email': 'hello@damarahu.com',
     'footer.connect': '联系方式',
     'footer.copyright': '© 2026 Damara Hu. All rights reserved.',
     'footer.quickLinks': '快速导航',
+    'github': 'https://github.com/damara',
     'home.cards.about.desc': '我的故事、价值观与身份认同',
     'home.cards.about.title': '关于我',
     'home.cards.contact.desc': '期待与你取得联系',
@@ -63,10 +65,13 @@ const I18N = {
     'interests.item.1.title': '运动健身',
     'interests.item.2.desc': '学习钢琴演奏，享受歌唱——音乐是我情感表达的另一种语言',
     'interests.item.2.title': '音乐艺术',
+    'linkedin': 'https://linkedin.com/in/damara',
+    'logo': 'Damara Hu',
     'memories.music.desc': '个人音乐作品',
     'memories.music.heading': '音乐',
     'memories.videos.desc': '会动的画面，会说话的记忆',
     'memories.videos.heading': '视频集',
+    'name': 'Damara Hu',
     'nav.about': '关于我',
     'nav.contact': '联系方式',
     'nav.education': '教育成长',
@@ -99,6 +104,7 @@ const I18N = {
     'projects.work.1.role': '生物信息学分析 实习生',
     'projects.work.1.title': 'BGI Group（华大基因）',
     'projects.work.heading': '工作经历',
+    'tagline': '终身学习者 · 创新者 · 结果导向',
   },
 
   en: {
@@ -131,9 +137,11 @@ const I18N = {
     'education.timeline.2.desc': 'Science-track high school student',
     'education.timeline.2.title': 'Yandaojie High School',
     'education.timeline.2.year': '2017.9 — 2020.6',
+    'email': 'hello@damarahu.com',
     'footer.connect': 'Connect',
     'footer.copyright': '© 2026 Damara Hu. All rights reserved.',
     'footer.quickLinks': 'Quick Links',
+    'github': 'https://github.com/damara',
     'home.cards.about.desc': 'My story, values, and identity',
     'home.cards.about.title': 'About Me',
     'home.cards.contact.desc': 'I would love to hear from you',
@@ -163,10 +171,13 @@ const I18N = {
     'interests.item.1.title': 'Exercise',
     'interests.item.2.desc': 'Learning to play the piano, enjoying singing — music is another language for my emotional expression',
     'interests.item.2.title': 'Musical Arts',
+    'linkedin': 'https://linkedin.com/in/damara',
+    'logo': 'Damara Hu',
     'memories.music.desc': 'Personal music works',
     'memories.music.heading': 'Music',
     'memories.videos.desc': 'Moving pictures, living memories',
     'memories.videos.heading': 'Videos',
+    'name': 'Damara Hu',
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'nav.education': 'Education',
@@ -199,5 +210,6 @@ const I18N = {
     'projects.work.1.role': 'Bioinformatics Analysis Intern',
     'projects.work.1.title': 'BGI Group',
     'projects.work.heading': 'Work Experience',
+    'tagline': 'Life-long Learner · Innovator · Result-driven',
   }
 };

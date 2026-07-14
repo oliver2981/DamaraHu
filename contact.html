@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Damara Hu">
+  <title data-i18n="nav.contact">Contact — Damara Hu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📬</text></svg>">
+</head>
+<body>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-hero-title" data-i18n="nav.contact">联系方式</h1>
+      <p class="page-hero-subtitle" id="contactSubtitle">请输入密码查看联系方式</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:480px;margin:0 auto;">
+      <!-- Password Form -->
+      <div class="card fade-in" id="passwordCard" style="text-align:center;">
+        <div style="font-size:3rem;margin-bottom:1rem;">🔐</div>
+        <p style="color:var(--text-secondary);margin-bottom:1.5rem;">此页面需要密码才能访问</p>
+        <div style="display:flex;gap:0.5rem;">
+          <input type="password" id="passwordInput" class="form-input" placeholder="输入密码..." style="flex:1;" autocomplete="off">
+          <button id="submitBtn" class="btn btn-primary" style="white-space:nowrap;">验证</button>
+        </div>
+        <p id="errorMsg" style="color:#e74c3c;font-size:0.85rem;margin-top:0.75rem;display:none;">密码错误，请重试</p>
+        <p id="decryptingMsg" style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.75rem;display:none;">验证中...</p>
+      </div>
+
+      <!-- Contact Info (hidden until correct password) -->
+      <div id="contactContent" style="display:none;">
+        <div class="card fade-in" style="margin-bottom:1.5rem;">
+          <h3 style="margin-bottom:1rem;text-align:center;font-size:1.1rem;" id="subtitleDisplay"></h3>
+          <div style="display:flex;flex-direction:column;gap:1.25rem;">
+            <div style="text-align:center;">
+              <div style="font-size:1.5rem;margin-bottom:0.5rem;">📧</div>
+              <div style="font-weight:600;margin-bottom:0.25rem;">Email</div>
+              <div id="emailList" style="color:var(--text-secondary);font-size:0.9rem;"></div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:1.5rem;margin-bottom:0.5rem;">💬</div>
+              <div style="font-weight:600;margin-bottom:0.25rem;">WhatsApp</div>
+              <div id="whatsappDisplay" style="color:var(--text-secondary);font-size:0.9rem;"></div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:1.5rem;margin-bottom:0.5rem;">📱</div>
+              <div style="font-weight:600;margin-bottom:0.25rem;">Telegram</div>
+              <div id="telegramList" style="color:var(--text-secondary);font-size:0.9rem;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function() {
+  'use strict';
+
+  var SALT = Uint8Array.from(atob('sIeou0qwsQOYO4lVHqh18A=='), function(c) { return c.charCodeAt(0); });
+  var IV = Uint8Array.from(atob('SGnx0cRTVKFEXZaJ'), function(c) { return c.charCodeAt(0); });
+  var CIPHERTEXT = 'WmqB/WSJ/3HsyG/qJ5EJDPwyuAL7+hMqfAm+fZONLVc4VCl6AM3PJejnc4PfI3h3SZUodgVCkj5c1RIiviqYXZeG5lnjwBchobb0n4E/oneVgfSLQB8fYJysuSMMuoQWRHWXaWC92tBH/3CEI/skTCnhDLEskK3yWvcdpNVoZ2htQRg8r1sMfEY4uXi37bcOl+2HhvzR/v8XzUhWgchW4YJ4co6+EVl1sEdCVbBUchg/pVF0y6h3UFDbaBqwiZAAW8ZuFNjjgUgnYI/zes5zdLD2R2a7U1Qq91eIMw==';
+
+  function showError(msg) {
+    document.getElementById('errorMsg').style.display = 'block';
+    document.getElementById('decryptingMsg').style.display = 'none';
+    document.getElementById('errorMsg').textContent = msg;
+  }
+
+  function showContact(data) {
+    document.getElementById('passwordCard').style.display = 'none';
+    var content = document.getElementById('contactContent');
+    content.style.display = 'block';
+    document.getElementById('contactSubtitle').textContent = data.subtitle;
+
+    var emailHtml = data.email.map(function(e) {
+      return '<a href="mailto:' + e + '" style="display:block;margin:0.15rem 0;">' + e + '</a>';
+    }).join('');
+    document.getElementById('emailList').innerHTML = emailHtml;
+
+    document.getElementById('whatsappDisplay').textContent = data.whatsapp;
+
+    var teleHtml = data.telegram.map(function(t) {
+      return '<span style="display:block;margin:0.15rem 0;">' + t + '</span>';
+    }).join('');
+    document.getElementById('telegramList').innerHTML = teleHtml;
+
+    // Trigger scroll animations
+    if (window.reobserveAnimations) window.reobserveAnimations();
+  }
+
+  function decrypt(encryptedB64, key) {
+    var ciphertext = Uint8Array.from(atob(encryptedB64), function(c) { return c.charCodeAt(0); });
+    return crypto.subtle.decrypt(
+      { name: 'AES-GCM', iv: IV, tagLength: 128 },
+      key,
+      new Uint8Array(ciphertext)
+    );
+  }
+
+  function decryptWithPassword(password) {
+    document.getElementById('errorMsg').style.display = 'none';
+    document.getElementById('decryptingMsg').style.display = 'block';
+
+    crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey'])
+      .then(function(baseKey) {
+        return crypto.subtle.deriveKey(
+          { name: 'PBKDF2', salt: SALT, iterations: 100000, hash: 'SHA-256' },
+          baseKey,
+          { name: 'AES-GCM', length: 256 },
+          false,
+          ['decrypt']
+        );
+      })
+      .then(function(aesKey) {
+        return decrypt(CIPHERTEXT, aesKey);
+      })
+      .then(function(plaintext) {
+        document.getElementById('decryptingMsg').style.display = 'none';
+        var data = JSON.parse(new TextDecoder().decode(plaintext));
+        showContact(data);
+      })
+      .catch(function() {
+        showError('密码错误，请重试');
+      });
+  }
+
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    var pw = document.getElementById('passwordInput').value;
+    if (!pw) { showError('请输入密码'); return; }
+    decryptWithPassword(pw);
+  });
+
+  document.getElementById('passwordInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      var pw = document.getElementById('passwordInput').value;
+      if (!pw) { showError('请输入密码'); return; }
+      decryptWithPassword(pw);
+    }
+  });
+})();
+</script>
+
+<script src="js/i18n-data.js"></script>
+<script src="js/i18n-engine.js"></script>
+<script src="js/shared.js"></script>
+</body>
+</html>

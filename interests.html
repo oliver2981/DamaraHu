@@ -80,36 +80,21 @@
     </div>
   </section>
 
-  <!-- Videos -->
+  <!-- Audio -->
   <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="memories.music.heading">音乐</h2>
+      <p class="section-subtitle" data-i18n="memories.music.desc">个人音乐作品</p>
+      <div id="audioPlaylist" style="max-width:600px;margin:2rem auto;"></div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="section">
     <div class="container">
       <h2 class="section-title" data-i18n="memories.videos.heading">视频集</h2>
       <p class="section-subtitle" data-i18n="memories.videos.desc">会动的画面，会说话的记忆</p>
-
-      <div class="video-grid">
-        <div class="video-card fade-in">
-          <div class="video-wrapper">
-            <video controls preload="metadata" poster="assets/images/avatar.jpg">
-              <source src="assets/videos/memory.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="video-card-body">
-            <h3>Memory</h3>
-            <p>生活中的点滴时光</p>
-          </div>
-        </div>
-        <div class="video-card fade-in">
-          <div class="video-wrapper">
-            <video controls preload="metadata" poster="assets/images/avatar.jpg">
-              <source src="assets/videos/music.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="video-card-body">
-            <h3>Music</h3>
-            <p>个人音乐作品</p>
-          </div>
-        </div>
-      </div>
+      <div class="video-grid" id="videoGrid"></div>
     </div>
   </section>
 </main>
@@ -198,5 +183,75 @@
 <script src="js/i18n-data.js"></script>
 <script src="js/i18n-engine.js"></script>
 <script src="js/shared.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  // Display name from filename: "summer-breeze.mp3" → "Summer Breeze"
+  function nameFromFile(file) {
+    var name = file.replace(/\.[^.]+$/, '');       // strip extension
+    name = name.replace(/[-_]/g, ' ');              // hyphens/underscores → spaces
+    // Capitalize words (only ASCII, leave CJK untouched)
+    name = name.replace(/[a-z]+/gi, function(w) {
+      return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+    });
+    return name;
+  }
+
+  function fetchList(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        var lines = xhr.responseText.split('\n').map(function(l) { return l.trim(); }).filter(Boolean);
+        callback(lines);
+      }
+    };
+    xhr.send();
+  }
+
+  function renderAudioPlaylist(files) {
+    var container = document.getElementById('audioPlaylist');
+    if (!container) return;
+    var html = '';
+    for (var i = 0; i < files.length; i++) {
+      var title = nameFromFile(files[i]);
+      html += '<div class="card fade-in" style="padding:1.5rem;margin-bottom:1rem;">' +
+        '<h3 style="margin:0 0 1rem;font-size:1.1rem;">' + title + '</h3>' +
+        '<audio controls preload="metadata" style="width:100%;">' +
+        '<source src="assets/audio/' + files[i] + '" type="audio/mpeg">' +
+        '</audio></div>';
+    }
+    container.innerHTML = html;
+  }
+
+  function renderVideoGrid(files) {
+    var container = document.getElementById('videoGrid');
+    if (!container) return;
+    var html = '';
+    for (var i = 0; i < files.length; i++) {
+      var title = nameFromFile(files[i]);
+      html += '<div class="video-card fade-in">' +
+        '<div class="video-wrapper">' +
+        '<video controls preload="metadata" poster="assets/images/avatar.jpg">' +
+        '<source src="assets/videos/' + files[i] + '" type="video/mp4">' +
+        '</video></div>' +
+        '<div class="video-card-body"><h3>' + title + '</h3></div>' +
+        '</div>';
+    }
+    container.innerHTML = html;
+  }
+
+  fetchList('assets/audio/list.txt', function(files) {
+    renderAudioPlaylist(files);
+    reobserveAnimations();
+  });
+
+  fetchList('assets/videos/list.txt', function(files) {
+    renderVideoGrid(files);
+    reobserveAnimations();
+  });
+})();
+</script>
 </body>
 </html>
