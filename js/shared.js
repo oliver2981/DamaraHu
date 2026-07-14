@@ -1,6 +1,12 @@
 (function() {
   'use strict';
 
+  /* === Vercel Web Analytics === */
+  var analyticsScript = document.createElement('script');
+  analyticsScript.defer = true;
+  analyticsScript.src = 'https://cdn.vercel-insights.com/v1/script.js';
+  document.head.appendChild(analyticsScript);
+
   /* === Nav HTML template === */
   var currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
 
