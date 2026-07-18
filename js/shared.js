@@ -1,25 +1,22 @@
 (function() {
   'use strict';
 
-  /* === Vercel Web Analytics === */
-  var analyticsScript = document.createElement('script');
-  analyticsScript.defer = true;
-  analyticsScript.src = 'https://cdn.vercel-insights.com/v1/script.js';
-  document.head.appendChild(analyticsScript);
+  /* Auto-detect base path for GitHub Pages project sites */
+  var basePath = (window.location.pathname.indexOf('/DamaraHu/') !== -1 || window.location.pathname.indexOf('/DamaraHu') !== -1 && window.location.pathname.endsWith('/DamaraHu')) ? '/DamaraHu' : '';
 
   /* === Nav HTML template === */
-  var currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+  var currentPage = window.location.pathname.replace(/\/$/, '').split('/').pop() || 'index';
 
   var navHTML = '<nav class="navbar">' +
     '<div class="navbar-inner">' +
-      '<a href="/" class="nav-logo">Damara Hu</a>' +
+      '<a href="' + basePath + '/" class="nav-logo">Damara Hu</a>' +
       '<ul class="nav-links" id="navLinks">' +
-        '<li><a href="/" data-i18n="nav.home" data-page="index">Home</a></li>' +
-        '<li><a href="/about.html" data-i18n="nav.about" data-page="about">About</a></li>' +
-        '<li><a href="/education.html" data-i18n="nav.education" data-page="education">Education</a></li>' +
-        '<li><a href="/projects.html" data-i18n="nav.projects" data-page="projects">Projects</a></li>' +
-        '<li><a href="/interests.html" data-i18n="nav.interests" data-page="interests">Interests</a></li>' +
-        '<li><a href="/contact.html" data-i18n="nav.contact" data-page="contact">Contact</a></li>' +
+        '<li><a href="' + basePath + '/" data-i18n="nav.home" data-page="index">Home</a></li>' +
+        '<li><a href="' + basePath + '/about" data-i18n="nav.about" data-page="about">About</a></li>' +
+        '<li><a href="' + basePath + '/education" data-i18n="nav.education" data-page="education">Education</a></li>' +
+        '<li><a href="' + basePath + '/projects" data-i18n="nav.projects" data-page="projects">Projects</a></li>' +
+        '<li><a href="' + basePath + '/interests" data-i18n="nav.interests" data-page="interests">Interests</a></li>' +
+        '<li><a href="' + basePath + '/contact" data-i18n="nav.contact" data-page="contact">Contact</a></li>' +
       '</ul>' +
       '<div class="nav-actions">' +
         '<button class="nav-btn" id="langToggle" data-i18n="nav.langToggle" aria-label="Switch language">EN</button>' +
@@ -37,12 +34,12 @@
       '<h4 class="footer-brand">Damara Hu</h4>' +
       '<p class="footer-tagline" data-i18n="home.hero.tagline">Student · Researcher · Creator</p>' +
       '<nav class="footer-links">' +
-        '<a href="/" data-i18n="nav.home">Home</a>' +
-        '<a href="/about.html" data-i18n="nav.about">About</a>' +
-        '<a href="/education.html" data-i18n="nav.education">Education</a>' +
-        '<a href="/projects.html" data-i18n="nav.projects">Projects</a>' +
-        '<a href="/interests.html" data-i18n="nav.interests">Interests</a>' +
-        '<a href="/contact.html" data-i18n="nav.contact">Contact</a>' +
+        '<a href="' + basePath + '/" data-i18n="nav.home">Home</a>' +
+        '<a href="' + basePath + '/about" data-i18n="nav.about">About</a>' +
+        '<a href="' + basePath + '/education" data-i18n="nav.education">Education</a>' +
+        '<a href="' + basePath + '/projects" data-i18n="nav.projects">Projects</a>' +
+        '<a href="' + basePath + '/interests" data-i18n="nav.interests">Interests</a>' +
+        '<a href="' + basePath + '/contact" data-i18n="nav.contact">Contact</a>' +
       '</nav>' +
       '<p class="footer-copyright" data-i18n="footer.copyright">© 2026 Damara Hu. All rights reserved.</p>' +
     '</div>' +

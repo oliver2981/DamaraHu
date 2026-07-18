@@ -2,11 +2,21 @@
   "outputDirectory": ".",
   "routes": [
     { "src": "/", "dest": "/index.html" },
-    { "src": "/about", "dest": "/about.html" },
-    { "src": "/education", "dest": "/education.html" },
-    { "src": "/projects", "dest": "/projects.html" },
-    { "src": "/interests", "dest": "/interests.html" },
-    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/about", "dest": "/about/index.html" },
+    { "src": "/about/", "dest": "/about/index.html" },
+    { "src": "/about.html", "dest": "/about/index.html" },
+    { "src": "/education", "dest": "/education/index.html" },
+    { "src": "/education/", "dest": "/education/index.html" },
+    { "src": "/education.html", "dest": "/education/index.html" },
+    { "src": "/projects", "dest": "/projects/index.html" },
+    { "src": "/projects/", "dest": "/projects/index.html" },
+    { "src": "/projects.html", "dest": "/projects/index.html" },
+    { "src": "/interests", "dest": "/interests/index.html" },
+    { "src": "/interests/", "dest": "/interests/index.html" },
+    { "src": "/interests.html", "dest": "/interests/index.html" },
+    { "src": "/contact", "dest": "/contact/index.html" },
+    { "src": "/contact/", "dest": "/contact/index.html" },
+    { "src": "/contact.html", "dest": "/contact/index.html" },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 }

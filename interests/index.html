@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Damara Hu — Interests, life, and hobbies.">
   <title data-i18n="nav.interests">Interests — Damara Hu</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎨</text></svg>">
 </head>
 <body>
@@ -58,8 +58,8 @@
       <p class="section-subtitle" data-i18n="interests.gallery.desc">记录生活的美好时刻</p>
 
       <div class="photo-grid" id="photoGrid">
-        <div class="photo-item fade-in" data-full="assets/images/avatar.jpg">
-          <img src="assets/images/avatar.jpg" alt="Damara" style="width:100%;height:100%;object-fit:cover;">
+        <div class="photo-item fade-in" data-full="../assets/images/avatar.jpg">
+          <img src="../assets/images/avatar.jpg" alt="Damara" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="photo-item fade-in">
           <span class="photo-placeholder">📷</span>
@@ -180,9 +180,9 @@
 })();
 </script>
 
-<script src="js/i18n-data.js"></script>
-<script src="js/i18n-engine.js"></script>
-<script src="js/shared.js"></script>
+<script src="../js/i18n-data.js"></script>
+<script src="../js/i18n-engine.js"></script>
+<script src="../js/shared.js"></script>
 <script>
 (function() {
   'use strict';
@@ -219,7 +219,7 @@
       html += '<div class="card fade-in" style="padding:1.5rem;margin-bottom:1rem;">' +
         '<h3 style="margin:0 0 1rem;font-size:1.1rem;">' + title + '</h3>' +
         '<audio controls preload="metadata" style="width:100%;">' +
-        '<source src="assets/audio/' + files[i] + '" type="audio/mpeg">' +
+        '<source src="../assets/audio/' + files[i] + '" type="audio/mpeg">' +
         '</audio></div>';
     }
     container.innerHTML = html;
@@ -233,8 +233,8 @@
       var title = nameFromFile(files[i]);
       html += '<div class="video-card fade-in">' +
         '<div class="video-wrapper">' +
-        '<video controls preload="metadata" poster="assets/images/avatar.jpg">' +
-        '<source src="assets/videos/' + files[i] + '" type="video/mp4">' +
+        '<video controls preload="metadata" poster="../assets/images/avatar.jpg">' +
+        '<source src="../assets/videos/' + files[i] + '" type="video/mp4">' +
         '</video></div>' +
         '<div class="video-card-body"><h3>' + title + '</h3></div>' +
         '</div>';
@@ -242,12 +242,12 @@
     container.innerHTML = html;
   }
 
-  fetchList('assets/audio/list.txt', function(files) {
+  fetchList('../assets/audio/list.txt', function(files) {
     renderAudioPlaylist(files);
     reobserveAnimations();
   });
 
-  fetchList('assets/videos/list.txt', function(files) {
+  fetchList('../assets/videos/list.txt', function(files) {
     renderVideoGrid(files);
     reobserveAnimations();
   });
